@@ -7,7 +7,7 @@
       size="70px"
       class="avatar m-2"
     />
-    <div class="buttons m-2">
+    <div class="buttons m-2 pt-4">
       <b-dropdown no-caret right variant="link">
         <template slot="button-content"
           ><i class="bi-three-dots-vertical text-white"
