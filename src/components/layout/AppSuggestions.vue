@@ -5,12 +5,12 @@
         <h5 class="text-uppercase p-0 my-3 flex-grow-1">
           {{ $t("general.suggestions") }}
         </h5>
-        <b-link @click.prevent="slideLeft" class="mr-2">
+        <!-- <b-link @click.prevent="slideLeft" class="mr-2">
           <i class="bi-arrow-left-circle" />
         </b-link>
         <b-link @click.prevent="slideRight">
           <i class="bi-arrow-right-circle" />
-        </b-link>
+        </b-link> -->
       </div>
       <div ref="swiper" class="swiper w-100 overflow-hidden">
         <div class="swiper-wrapper">
