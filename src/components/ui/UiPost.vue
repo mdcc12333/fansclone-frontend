@@ -198,7 +198,7 @@
       </b-link> -->
     </div>
     <b-card-footer>
-      <div class="d-flex justify-content-between">
+      <div class="d-flex justify-content-between post-footer">
         <b-link
           href="#"
           class="ml-3 mr-2"
