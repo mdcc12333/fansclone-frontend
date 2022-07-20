@@ -179,17 +179,17 @@
         />
       </b-container>
     </b-modal>
-    <app-suggestions-insta />
+    <!-- <app-suggestions-insta /> -->
   </header>
 </template>
 <script>
 import ModalLogin from '../ModalLogin.vue';
 import ModalSignup from '../ModalSignup.vue';
-import AppSuggestionsInsta from "./AppSuggestionsInsta.vue";
+// import AppSuggestionsInsta from "./AppSuggestionsInsta.vue";
 
 export default{
   components: {
-    ModalLogin, ModalSignup, AppSuggestionsInsta
+    ModalLogin, ModalSignup,
   },
   computed: {
     currentUser() {
