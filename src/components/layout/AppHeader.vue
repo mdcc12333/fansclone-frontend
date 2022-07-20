@@ -13,7 +13,7 @@
             <b-nav-item class="mr-3" to="/">
               <i class="bi-house" style="font-size: 2rem;" /> {{ $t("general.home") }}
             </b-nav-item>
-            <b-nav-item class="mr-3" to="/subscribed">
+            <b-nav-item class="mr-3" to="/subscriptions">
               <i class="bi-lock" style="font-size: 2rem;" /> {{ $t("general.subscribed") }}
             </b-nav-item>
             <b-nav-item class="mr-3" to="/posts/create">
