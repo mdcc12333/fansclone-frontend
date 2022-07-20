@@ -54,8 +54,8 @@ export default {
   computed: {
     chunkedArr() {
       const result = [];
-      for (let i = 0; i < this.users.length; i += 3)
-        result.push(this.users.slice(i, i + 3));
+      for (let i = 0; i < this.users.length; i += 5)
+        result.push(this.users.slice(i, i + 5));
       return result;
     },
   },

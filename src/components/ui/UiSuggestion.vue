@@ -4,7 +4,7 @@
     <b-avatar
       :src="user.avatar"
       :text="user.initials"
-      size="100px"
+      size="70px"
       class="avatar m-2"
     />
     <div class="buttons m-2">
