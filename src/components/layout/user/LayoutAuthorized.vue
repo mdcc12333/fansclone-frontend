@@ -1,8 +1,14 @@
 <template>
   <div>
+    <div v-if="!isMobile()">
+      <AppHeader />
+    </div>
+    <div v-else>
+      <AppHeaderMobile />
+    </div>
     <b-container>
       <b-row>
-        <b-col lg="3" md="2" sm="2" class="d-none d-sm-block">
+        <!-- <b-col lg="3" md="2" sm="2" class="d-none d-sm-block">
           <b-nav vertical class="sticky-top">
             <b-nav-item v-b-toggle.sidebar>
               <b-avatar
@@ -83,7 +89,8 @@
               </b-button>
             </b-nav-item>
           </b-nav>
-        </b-col>
+        </b-col> -->
+        <b-col lg="3"></b-col>
         <b-col
           :lg="
             $route.name == 'subscriptions' ||
@@ -200,6 +207,9 @@ a.nav-link {
 </style>
 <script>
 import AppMenu from "../AppMenu.vue";
+import AppHeader from "../AppHeader.vue";
+import AppHeaderMobile from "../AppHeaderMobile.vue";
+
 export default {
   computed: {
     spinner() {
@@ -212,6 +222,15 @@ export default {
       return this.$store.state.updates;
     },
   },
-  components: { AppMenu },
+  methods: {
+    isMobile() {
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+      } else {
+        return false
+      }
+    },
+  },
+  components: { AppMenu, AppHeader, AppHeaderMobile },
 };
 </script>

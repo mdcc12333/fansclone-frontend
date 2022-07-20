@@ -6,6 +6,8 @@ import { BootstrapVue } from 'bootstrap-vue'
 import VueClipboard from 'vue-clipboard2'
 import VueMask from 'v-mask'
 import Misc from './plugins/Misc'
+import Iconly from "vue-iconly";
+
 
 import "@/assets/scss/_theming.scss";
 import i18n from './i18n'
@@ -27,6 +29,7 @@ Vue.use(BootstrapVue)
 Vue.use(VueClipboard)
 Vue.use(Misc);
 Vue.use(VueMask);
+Vue.use(Iconly);
 
 new Vue({
   router,

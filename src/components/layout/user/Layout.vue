@@ -1,18 +1,20 @@
 <template>
   <layout-authorized v-if="isLoggedIn" />
-  <layout-landing v-else />
+  <layout-discovery v-else />
 </template>
 <script>
 import LayoutAuthorized from "./LayoutAuthorized.vue";
-import LayoutLanding from "./LayoutLanding.vue";
+// import LayoutLanding from "./LayoutLanding.vue";
+import LayoutDiscovery from "./LayoutDiscovery.vue";
 export default {
   computed: {
     isLoggedIn: function () {
       return this.$store.state.token != null;
     },
   },
-  components: { LayoutAuthorized, LayoutLanding },
+  components: { LayoutAuthorized, LayoutDiscovery },
   mounted() {
+
     if (this.isLoggedIn) {
       this.$get(
         "/auth/me",

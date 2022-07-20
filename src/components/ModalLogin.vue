@@ -77,9 +77,10 @@
 </style>
 <script>
 // import GoogleLogin from "vue-google-login";
-import User from "../models/User";
-import UiFormInput from "../ui/UiFormInput.vue";
+import User from "./models/User";
+import UiFormInput from "./ui/UiFormInput.vue";
 export default {
+  name: 'ModalLogin',
   components: { UiFormInput },
   data() {
     return {

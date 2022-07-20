@@ -12,7 +12,7 @@
           <div class="px-5 pb-5">
             <ui-logo class="logo d-md-none text-primary" />
           </div>
-          <router-view name="login"></router-view>
+          <router-view name="discovery"></router-view>
         </div>
       </div>
     </div>

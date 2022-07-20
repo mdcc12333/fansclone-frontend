@@ -10,17 +10,19 @@
 
       <div class="flex-grow-1 px-2 overflow-hidden d-block align-items-center">
         <ui-username :user="post.user" />
-        <b-link
+        <!-- <b-link
           :to="'/' + post.user.username"
           class="small text-secondary username d-block"
           >@{{ post.user.username }}
-        </b-link>
+        </b-link> -->
+        <div class="small text-secondary username d-block">{{ post.ago }}</div>
       </div>
 
       <div class="d-flex align-items-center">
-        <div class="text-muted mr-3">{{ post.ago }}</div>
+        <b-button class="btn-danger">Subscribe</b-button>
+        <!-- <div class="text-muted mr-3">{{ post.ago }}</div> -->
         <b-dropdown no-caret right variant="link">
-          <template slot="button-content"><i class="bi-three-dots" /></template>
+          <template slot="button-content"><i class="bi-three-dots-vertical" /></template>
           <b-dropdown-item @click.prevent="copyLink">{{
             $t("general.copy-link-to-post")
           }}</b-dropdown-item>
@@ -37,7 +39,7 @@
         </b-dropdown>
       </div>
     </div>
-    <b-card no-body no-footer class="poll m-3" v-if="post.poll.length > 0">
+    <b-card no-body class="poll m-3" v-if="post.poll.length > 0">
       <b-list-group flush>
         <b-list-group-item
           v-for="(poll, index) in post.poll"
@@ -62,9 +64,9 @@
       </b-list-group>
       <b-card-footer>{{ $tc("general.x-votes", [totalVotes]) }}</b-card-footer>
     </b-card>
-    <div class="px-3 pb-3 w-100 overflow-hidden nl2br wrap">
+    <!-- <div class="px-3 pb-3 w-100 overflow-hidden nl2br wrap">
       {{ post.message }}
-    </div>
+    </div> -->
     <div class="media" v-if="post.media.length > 0 && hasAccess">
       <div ref="swiper" class="swiper w-100" v-if="post.media.length > 1">
         <div class="swiper-wrapper">
@@ -156,7 +158,7 @@
         </div>
       </b-aspect>
     </div>
-    <div class="d-flex align-items-center py-2 w-100">
+    <!-- <div class="d-flex align-items-center py-2 w-100">
       <b-link
         href="#"
         class="ml-3 mr-2"
@@ -181,15 +183,45 @@
         <i class="bi-bookmark" v-if="post.isBookmarked === false" />
         <i class="bi-bookmark-fill" v-else />
       </b-link>
+    </div> -->
+    <div class="px-3 pb-3 pt-3 w-100 overflow-hidden nl2br wrap">
+      {{ post.message }}
     </div>
     <div class="d-flex align-items-center pb-2 small px-3">
       <div>
-        {{ $t("general.x-likes", [post.likesCount]) }}
+        <i class="bi-heart-fill mr-1" style="color:red;" />{{post.likesCount}}
+        <!-- {{ $t("general.x-likes", [post.likesCount]) }} -->
       </div>
-      <i class="bi-dot" />
+      <!-- <i class="bi-dot" />
       <b-link :to="post.url" :disabled="!hasAccess">
         {{ $t("general.x-comments", [post.commentsCount]) }}
-      </b-link>
+      </b-link> -->
+    </div>
+    <b-card-footer>
+      <div class="d-flex justify-content-between">
+        <b-link
+          href="#"
+          class="ml-3 mr-2"
+          @click.prevent="like"
+          :disabled="!hasAccess"
+        >
+          <i class="bi-heart mr-1" v-if="post.isLiked === false" />
+          <i class="bi-heart-fill mr-1" v-else /> Like
+        </b-link>
+        <b-link
+          class="mx-2 nounderline"
+          :disabled="!hasAccess"
+          @click.prevent="tip"
+          v-if="!isOwner"
+        >
+          <i class="bi-coin" /> {{ $t("general.send-tip") }}
+        </b-link>
+        <b-link @click.prevent="copyLink">
+          <i class="bi-share mr-1" />{{$t("general.share")}}</b-link>
+      </div>
+    </b-card-footer>
+    <div class="flex pt-3 pb-3 pl-2">
+      <b-link class="more-posts" :to="post.user.url">{{$t("general.more-posts-from")}} {{ post.user.name }}</b-link>
     </div>
   </div>
 </template>

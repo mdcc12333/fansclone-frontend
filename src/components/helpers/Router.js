@@ -3,6 +3,7 @@ import LayoutAdmin from '../layout/admin/Layout.vue';
 import PagePost from '../pages/PagePost.vue';
 import PageLogin from '../pages/PageLogin.vue';
 import PageHome from '../pages/PageHome.vue';
+import PageDiscovery from '../pages/PageDiscovery.vue';
 import PageSearch from '../pages/PageSearch.vue';
 import PageNewPost from '../pages/PageNewPost.vue';
 import PageSettings from '../pages/PageSettings.vue';
@@ -185,6 +186,16 @@ export default [
             {
                 path: '/:id/:username',
                 component: PagePost,
+            },
+            {
+                path: '/discovery',
+                component: PageDiscovery,
+                name: 'discovery'
+            },
+            {
+                path: '/discovery',
+                component: PageDiscovery,
+                name: 'discovery'
             },
             {
                 path: '/',
