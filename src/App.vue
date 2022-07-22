@@ -16,10 +16,9 @@
 import UiAddToList from "./components/ui/UiAddToList.vue";
 import UiBuy from "./components/ui/UiBuy.vue";
 import UiCookies from "./components/ui/UiCookies.vue";
-import UiPhotoSwipe from "./components/ui/UiPhotoSwipe.vue";
 import Pusher from "pusher-js";
 export default {
-  components: { UiPhotoSwipe, UiAddToList, UiBuy, UiCookies },
+  components: { UiAddToList, UiBuy, UiCookies },
   computed: {
     swiperItems() {
       return this.$store.state.swiperItems;

@@ -4,7 +4,6 @@
 </template>
 <script>
 import LayoutAuthorized from "./LayoutAuthorized.vue";
-// import LayoutLanding from "./LayoutLanding.vue";
 import LayoutDiscovery from "./LayoutDiscovery.vue";
 export default {
   computed: {
@@ -14,7 +13,6 @@ export default {
   },
   components: { LayoutAuthorized, LayoutDiscovery },
   mounted() {
-
     if (this.isLoggedIn) {
       this.$get(
         "/auth/me",

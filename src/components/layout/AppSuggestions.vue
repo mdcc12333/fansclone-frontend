@@ -1,8 +1,7 @@
 <template>
-  <b-row class="sticky-top">
-    <b-col>
-      <div class="d-flex align-items-center w-100">
-        <h5 class="text-uppercase p-0 my-3 flex-grow-1">
+  <b-row class="sticky-top top-models">
+      <div class="d-flex align-items-center w-100 px-3 border-gray">
+        <h5 class="p-0 my-3 flex-grow-1 top-models-header">
           {{ $t("general.suggestions") }}
         </h5>
         <!-- <b-link @click.prevent="slideLeft" class="mr-2">
@@ -12,7 +11,7 @@
           <i class="bi-arrow-right-circle" />
         </b-link> -->
       </div>
-      <div ref="swiper" class="swiper w-100 overflow-hidden">
+      <div ref="swiper" class="swiper w-100 overflow-hidden px-3 pt-19 border-gray">
         <div class="swiper-wrapper">
           <div
             class="swiper-slide d-block"
@@ -23,12 +22,11 @@
               :user="user"
               v-for="(user, k) in item"
               :key="k"
-              class="mb-2"
+              class="mb-3"
             />
           </div>
         </div>
       </div>
-    </b-col>
   </b-row>
 </template>
 <script>
@@ -87,3 +85,16 @@ export default {
   },
 };
 </script>
+
+<style>
+.top-models{
+  margin: 17px -90px 0 5px;
+}
+.top-models-header{
+  font-weight: 700;
+  font-size: 17px;
+}
+.pt-19{
+  padding-top: 19px;
+}
+</style>

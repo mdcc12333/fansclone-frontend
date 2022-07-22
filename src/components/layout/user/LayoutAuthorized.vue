@@ -8,88 +8,6 @@
     </div>
     <b-container>
       <b-row>
-        <!-- <b-col lg="3" md="2" sm="2" class="d-none d-sm-block">
-          <b-nav vertical class="sticky-top">
-            <b-nav-item v-b-toggle.sidebar>
-              <b-avatar
-                :text="currentUser.initials"
-                :src="currentUser.avatar"
-                class="bg-secondary text-white"
-              />
-            </b-nav-item>
-            <b-nav-item to="/" exact>
-              <div class="icon d-inline-block"><i class="bi-house" /></div>
-              <span class="d-none d-lg-inline ml-3">{{
-                $t("general.home")
-              }}</span>
-            </b-nav-item>
-            <b-nav-item to="/notifications">
-              <div class="icon d-inline-block">
-                <i class="bi-bell" />
-                <i class="bi-dot" v-if="updates.notifications > 0" />
-              </div>
-              <span class="d-none d-lg-inline ml-3">{{
-                $t("general.notifications")
-              }}</span>
-            </b-nav-item>
-            <b-nav-item to="/messages">
-              <div class="icon d-inline-block">
-                <i class="bi-chat" />
-                <i class="bi-dot" v-if="updates.messages > 0" />
-              </div>
-              <span class="d-none d-lg-inline ml-3">{{
-                $t("general.messages")
-              }}</span>
-            </b-nav-item>
-            <b-nav-item to="/bookmarks" exact>
-              <div class="icon d-inline-block"><i class="bi-bookmark" /></div>
-              <span class="d-none d-lg-inline ml-3">{{
-                $t("general.bookmarks")
-              }}</span>
-            </b-nav-item>
-            <b-nav-item to="/lists">
-              <div class="icon d-inline-block"><i class="bi-list" /></div>
-              <span class="d-none d-lg-inline ml-3">{{
-                $t("general.lists")
-              }}</span>
-            </b-nav-item>
-            <b-nav-item to="/subscriptions">
-              <div class="icon d-inline-block"><i class="bi-heart" /></div>
-              <span class="d-none d-lg-inline ml-3">{{
-                $t("general.subscriptions")
-              }}</span>
-            </b-nav-item>
-            <b-nav-item :to="currentUser.url" exact>
-              <div class="icon d-inline-block"><i class="bi-person" /></div>
-              <span class="d-none d-lg-inline ml-3">{{
-                $t("general.my-profile")
-              }}</span>
-            </b-nav-item>
-            <b-nav-item v-b-toggle.sidebar>
-              <div class="icon d-inline-block"><i class="bi-three-dots" /></div>
-              <span class="d-none d-lg-inline ml-3">{{
-                $t("general.more")
-              }}</span>
-            </b-nav-item>
-            <b-nav-item>
-              <b-button
-                class="w-100 d-lg-block d-md-none d-sm-none"
-                :to="currentUser.isCreator ? '/posts/create' : '/payouts'"
-                variant="primary"
-                >{{ $t("general.new-post") }}</b-button
-              >
-              <b-button
-                class="w-100 d-md-block d-sm-block d-lg-none p-2"
-                :to="currentUser.isCreator ? '/posts/create' : '/payouts'"
-                variant="primary"
-              >
-                <div class="icon d-inline-block">
-                  <i class="bi-plus" style="font-size: 150%; line-height: 1" />
-                </div>
-              </b-button>
-            </b-nav-item>
-          </b-nav>
-        </b-col> -->
         <b-col lg="3"></b-col>
         <b-col
           :lg="
@@ -103,7 +21,7 @@
           md="9"
           sm="9"
           cols="12"
-          class="border-left border-right content"
+          class="content"
         >
           <router-view></router-view>
           <div class="spinner" v-if="spinner">

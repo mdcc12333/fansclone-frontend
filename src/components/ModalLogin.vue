@@ -1,13 +1,14 @@
 <template>
   <div>
-    <p class="title">Let’s Sign You In</p>
-    <p class="subtitle">Fill out info below to sign in!</p>
+    <div class="title">Let’s Sign You In</div>
+    <div class="subtitle">Fill out info below to sign in!</div>
     <div v-if="errors._ && errors._.length > 0">
       <div class="alert alert-danger" v-for="error in errors._" :key="error">
         {{ error }}
       </div>
     </div>
 
+    <br><br>
     <ui-form-input
       type="text"
       name="email"

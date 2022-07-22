@@ -1,14 +1,7 @@
 <template>
   <div>
-    <app-suggestions-insta />
     <b-row>
-
       <b-col>
-        <b-row class="sticky-top bg-white page-header">
-          <b-col class="px-3 border-bottom">
-            <h5 class="text-uppercase my-3">{{ $t("general.home") }}</h5>
-          </b-col>
-        </b-row>
         <ui-posts v-model="posts" />
       </b-col>
     </b-row>
@@ -18,7 +11,6 @@
 <script>
 import Post from "../models/Post";
 import UiPosts from "../ui/UiPosts.vue";
-import AppSuggestionsInsta from "../layout/AppSuggestionsInsta.vue";
 
 export default {
   data: function () {
@@ -34,7 +26,7 @@ export default {
     window.addEventListener("scroll", this.updateScroll);
   },
   components: {
-    UiPosts, AppSuggestionsInsta,
+    UiPosts,
   },
   methods: {
     updateScroll() {

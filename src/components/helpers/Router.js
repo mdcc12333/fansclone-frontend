@@ -182,15 +182,11 @@ export default [
             {
                 path: '/:username',
                 component: PageUser,
+                name: 'profile'
             },
             {
                 path: '/:id/:username',
                 component: PagePost,
-            },
-            {
-                path: '/discovery',
-                component: PageDiscovery,
-                name: 'discovery'
             },
             {
                 path: '/discovery',
@@ -203,9 +199,9 @@ export default [
                     default: PageHome,
                     login: PageLogin,
                     side: AppSide
-                }
+                },
+                name: 'home'
             },
-
         ]
     }
 ];

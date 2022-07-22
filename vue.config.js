@@ -1,9 +1,4 @@
 module.exports = {
-  devServer: {
-    host: 'domfans.com',
-    port: 8080,
-    https: false
-  },
   pluginOptions: {
     i18n: {
       locale: 'en',
