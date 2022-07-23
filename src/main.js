@@ -19,6 +19,7 @@ const router = new VueRouter({
 Vue.use(Vuex)
 import stores from './components/helpers/Store';
 import './registerServiceWorker'
+import vuetify from './plugins/vuetify'
 const store = new Vuex.Store(stores);
 
 Vue.config.productionTip = false
@@ -32,5 +33,6 @@ new Vue({
   router,
   i18n,
   store,
+  vuetify,
   render: h => h(App)
 }).$mount('#app')

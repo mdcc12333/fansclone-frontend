@@ -18,7 +18,7 @@
         <div class="time-ago">{{ post.ago }}</div>
       </div>
 
-      <div class="d-flex align-items-center" style="margin-top: 4px;">
+      <div class="d-flex align-items-center text-white" style="margin-top: 4px;">
         <b-button class="btn-danger">Subscribe</b-button>
         <!-- <div class="text-muted mr-3">{{ post.ago }}</div> -->
         <b-dropdown no-caret right variant="link" class="ml-1">
@@ -395,12 +395,12 @@ export default {
     },
     isOwner: function () {
       return (
-          this.$store.state.currentUser.isAdmin ||
-          (this.value && this.value.user.id == this.$store.state.currentUser.id)
+          this.$store.state.currentUser?.isAdmin ||
+          (this.value && this.value.user?.id == this.$store.state.currentUser?.id)
       );
     },
     hasAccess: function () {
-      return this.$store.state.currentUser.isAdmin || this.post.hasAccess;
+      return this.$store.state.currentUser?.isAdmin || this.post.hasAccess;
     },
     totalVotes() {
       let total = 0;

@@ -236,6 +236,7 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 8px;
   font-weight: 600;
   font-size: 13px;
+  color: #fff;
 }
 .btn-danger:hover{
   background: #aa1423;
@@ -276,4 +277,74 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .border-gray{
   border: 2px solid #F4F4F4;
+}
+fieldset{
+  border: 1.5px solid #E8E8E8!important;
+  border-radius: 12px!important;
+}
+#signup-modal___BV_modal_body_ > div > form > div.phone-input.vue-tel-input-vuetify > div.country-code > div > div > div.v-input__slot > fieldset{
+  border-right:none!important;
+  border-radius: 12px 0 0 12px!important;
+}
+#signup-modal___BV_modal_body_ > div > form > div.phone-input.vue-tel-input-vuetify > div.v-input.theme--light.v-text-field.v-text-field--is-booted.v-text-field--enclosed.v-text-field--outlined.v-text-field--placeholder > div > div.v-input__slot > fieldset{
+  border-radius: 0 12px 12px 0!important;
+  border-left:none!important;
+}
+legend{
+  margin-left: 20px!important;
+  line-height: 17px!important;
+}
+.v-input__slot{
+  padding: 0 28px!important;
+}
+.v-label{
+  left:-8px!important;
+}
+#signup-modal___BV_modal_body_ > div > form > div.phone-input.vue-tel-input-vuetify > div.v-input.v-input--is-label-active.v-input--is-dirty.theme--light.v-text-field.v-text-field--is-booted.v-text-field--enclosed.v-text-field--outlined.v-text-field--placeholder > div > div.v-input__slot > div > label{
+  left:-58px!important;
+  background-color: white!important;
+}
+#signup-modal___BV_modal_body_ > div > form > div.phone-input.vue-tel-input-vuetify > div.v-input.v-input--is-focused > div > div.v-input__slot > div > label{
+  left:-58px!important;
+  background-color: white!important;
+}
+#signup-modal___BV_modal_body_ > div > form > div.phone-input.vue-tel-input-vuetify > div.v-input.v-input--is-label-active.v-input--is-dirty.theme--light.v-text-field.v-text-field--is-booted.v-text-field--enclosed.v-text-field--outlined.v-text-field--placeholder > div > div.v-input__slot > div > label:before{
+
+  content: '  '!important;
+}
+#signup-modal___BV_modal_body_ > div > form > div.phone-input.vue-tel-input-vuetify > div.v-input.v-input--is-focused > div > div.v-input__slot > div > label:before{
+  content: '  '!important;
+}
+#signup-modal___BV_modal_body_ > div > form > div.phone-input.vue-tel-input-vuetify > div.v-input.v-input--is-label-active.v-input--is-dirty.theme--light.v-text-field.v-text-field--is-booted.v-text-field--enclosed.v-text-field--outlined.v-text-field--placeholder > div > div.v-input__slot > fieldset > legend{
+  width: 56px!important;
+}
+#signup-modal___BV_modal_body_ > div > form > div.phone-input.vue-tel-input-vuetify > div.v-input.v-input--is-focused > div > div.v-input__slot > fieldset > legend{
+  width: 56px!important;
+}
+.v-input--is-label-active.email-input legend{
+  width:109px!important;
+}
+.v-input--is-label-active.password-input legend{
+  width:74px!important;
+}
+.v-input--is-label-active.name-input legend{
+  width:79px!important;
+}
+.v-input--is-focused.email-input legend{
+  width:109px!important;
+}
+.v-input--is-focused.password-input legend{
+  width:74px!important;
+}
+.v-input--is-focused.name-input legend{
+  width:79px!important;
+}
+.error--text{
+  color: #dc3545!important;
+}
+.error--text fieldset{
+  border: 1.5px solid #dc3545!important;
+}
+.country-code{
+  width:45px!important;
 }

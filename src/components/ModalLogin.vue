@@ -9,28 +9,31 @@
     </div>
 
     <br><br>
-    <ui-form-input
-      type="text"
-      name="email"
-      v-model="email"
-      :errors="errors"
-      :label="$t('general.email')"
-    />
-
-    <ui-form-input
-      type="password"
-      name="password"
-      v-model="password"
-      :errors="errors"
-      :label="$t('general.password')"
-    />
+    <v-text-field
+        v-model="email"
+        :label="$t('general.email')"
+        name="email"
+        outlined
+        :error-messages="errors.email"
+        class="email-input"
+    ></v-text-field>
+    <v-text-field
+        v-model="password"
+        :label="$t('general.password')"
+        outlined
+        type="password"
+        name="password"
+        :error-messages="errors.password"
+        class="password-input"
+    ></v-text-field>
     <div class="d-flex small align-items-center justify-content-center mb-3">
       <b-link class="forgot-password-text" to="/forgot">{{ $t("general.forgot-password") }}</b-link>
     </div>
 
     <b-button
       variant="primary"
-      class="w-100 mb-3"
+      style="padding: 11px;"
+      class="w-100 mb-3 text-white"
       @click.prevent="submitForm"
       >{{ $t("general.login") }}</b-button
     >
@@ -79,15 +82,16 @@
 <script>
 // import GoogleLogin from "vue-google-login";
 import User from "./models/User";
-import UiFormInput from "./ui/UiFormInput.vue";
 export default {
   name: 'ModalLogin',
-  components: { UiFormInput },
   data() {
     return {
       email: "",
       password: "",
-      errors: {},
+      errors: {
+        email: [],
+        password: []
+      },
     };
   },
   computed: {
@@ -117,7 +121,10 @@ export default {
       );
     },
     login(type, token) {
-      this.errors = {};
+      this.errors = {
+        email: [],
+        password: []
+      };
       let fields = {
         channel_type: type,
       };
@@ -133,6 +140,7 @@ export default {
         (data) => {
           this.$saveToken(data.token);
           this.$saveUser(data.user);
+          this.$emit('close')
         },
         (errors) => {
           this.errors = errors;

@@ -8,6 +8,7 @@ module.exports = {
       enableBridge: false
     }
   },
+
   pwa: {
     manifestOptions: {
       icons: [
@@ -34,5 +35,9 @@ module.exports = {
       maskIcon: 'img/icons/safari-pinned-tab.svg',
       msTileImage: 'img/icons/mstile-150x150.png',
     }
-  }
+  },
+
+  transpileDependencies: [
+    'vuetify'
+  ]
 }
